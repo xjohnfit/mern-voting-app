@@ -29,7 +29,7 @@ const Login = () => {
                     <input onChange={inputHandler} type="email" name="email" placeholder="Email Address" autoComplete="true" />
                     <input onChange={inputHandler} type="password" name="password" placeholder="Password" autoComplete="true" />
                     <p>
-                        Don't have an account?
+                        Don't have an account? {' '}
                         <Link to='/register'>Register Now</Link>
                     </p>
                     <button type='submit' className="btn primary">Login</button>

@@ -20,8 +20,6 @@ const Register = () => {
         });
     }
 
-    console.log(userData)
-
     return (
         <section className="register">
             <div className="container register__container">
@@ -35,7 +33,7 @@ const Register = () => {
                     <input onChange={inputHandler} type="password" name="password" placeholder="Password" autoComplete="true" />
                     <input onChange={inputHandler} type="password" name="confirm-password" placeholder="Confirm Password" autoComplete="true" />
                     <p>
-                        Already have an account?
+                        Already have an account? {' '}
                         <Link to='/'> Sign In</Link>
                     </p>
                     <button type='submit' className="btn primary">Register</button>

@@ -41,6 +41,20 @@
     border-radius: var(--radius-1);
 }
 
+.dark .register__container {
+    background: var(--color-gray-200);
+    box-shadow: 0 0.4rem 1rem rgba(0, 0, 0, 0.4);
+}
+
+.dark .register form input {
+    background: var(--color-gray-300);
+    color: var(--color-black);
+}
+
+.dark .register form input::placeholder {
+    color: var(--color-gray-600);
+}
+
 /* MEDIA QUERIES */
 
 @media screen and (max-width: 600px) {

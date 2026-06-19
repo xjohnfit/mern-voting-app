@@ -146,3 +146,8 @@ button {
     background-color: var(--color-black);
     color: var(--color-white);
 }
+
+.dark .btn:hover {
+    background-color: var(--color-white);
+    color: var(--color-gray-100);
+}
