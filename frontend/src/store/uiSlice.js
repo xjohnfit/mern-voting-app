@@ -22,13 +22,13 @@ const uiSlice = createSlice({
             state.voteCandidateModalShowing = true
         },
         closeVoteCandidateModal(state) {
-            state.addCandidateModalShowing = false
+            state.voteCandidateModalShowing = false
         },
 
         openElectionCandidateModal(state) {
             state.electionModalShowing = true
         },
-        closeElectionModal(state) {
+        closeElectionCandidateModal(state) {
             state.electionModalShowing = false
         },
 
