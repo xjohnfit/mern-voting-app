@@ -1,6 +1,16 @@
 import { Link } from 'react-router';
+import { useDispatch } from 'react-redux';
+import { UiActions } from '../store/uiSlice';
 
 const Election = ({ id, title, description, thumbnail }) => {
+
+    const dispatch = useDispatch();
+
+    // Open update election modal
+    const openUpdateModal = () => {
+        dispatch(UiActions.openUpdateElectionModal());
+    }
+
   return (
     <article className="election">
         <div className="election__image">
@@ -11,7 +21,7 @@ const Election = ({ id, title, description, thumbnail }) => {
             <p>{description?.length > 255 ? description.substring(0, 255) + '...' : description}</p>
             <div className="election__cta">
                 <Link to={`/elections/${id}`} className='btn'>View</Link>
-                <button className="btn primary">Edit</button>
+                <button className="btn primary" onClick={openUpdateModal}>Edit</button>
             </div>
         </div>
     </article>

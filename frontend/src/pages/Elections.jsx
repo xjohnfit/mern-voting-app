@@ -5,6 +5,7 @@ import '../styles/elections.css';
 import AddElectionModal from '../components/AddElectionModal';
 import { useDispatch, useSelector } from 'react-redux';
 import { UiActions } from '../store/uiSlice';
+import UpdateElectionModal from '../components/UpdateElectionModal';
 
 const Elections = () => {
     const [elections, setElections] = useState(dummyElections);
@@ -18,6 +19,10 @@ const Elections = () => {
 
     const electionModalShowing = useSelector(
         (state) => state.ui.electionModalShowing,
+    );
+
+    const updateElectionModalShowing = useSelector(
+        (state) => state.ui.updateElectionModalShowing,
     );
 
     return (
@@ -44,6 +49,7 @@ const Elections = () => {
             </section>
 
             {electionModalShowing && <AddElectionModal />}
+            {updateElectionModalShowing && <UpdateElectionModal />}
         </>
     );
 };
