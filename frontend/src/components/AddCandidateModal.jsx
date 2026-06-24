@@ -4,6 +4,7 @@ import { useDispatch } from 'react-redux';
 import { UiActions } from '../store/uiSlice';
 
 const AddCandidateModal = () => {
+    
     const [fullName, setFullName] = useState('');
     const [motto, setMotto] = useState('');
     const [image, setImage] = useState('');
